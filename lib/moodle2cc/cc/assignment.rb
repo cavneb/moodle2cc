@@ -9,7 +9,7 @@ module Moodle2CC::CC
       super
       @body = convert_file_path_tokens(mod.description)
       @meta_fields = build_meta_fields(mod)
-      @rel_path = File.join(CC_ASSIGNMENT_FOLDER, "#{file_slug(@title)}.html")
+      @rel_path = File.join(CC_ASSIGNMENT_FOLDER, "#@section_number-#{file_slug(@title)}.html")
       @resource_type = nil
     end
     

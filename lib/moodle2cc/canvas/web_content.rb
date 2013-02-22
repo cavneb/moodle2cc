@@ -4,7 +4,7 @@ module Moodle2CC::Canvas
     
     def initialize(mod)
       super
-      @rel_path = File.join(WIKI_FOLDER, "#{file_slug(@title)}.html")
+      @rel_path = File.join(WIKI_FOLDER, "#@section_number-#{file_slug(@title)}.html")
     end
 
     def create_module_meta_item_elements(item_node)

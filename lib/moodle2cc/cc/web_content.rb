@@ -7,7 +7,7 @@ module Moodle2CC::CC
 
     def initialize(mod)
       super
-      @rel_path = File.join(CC_WIKI_FOLDER, "#{file_slug(@title)}.html")
+      @rel_path = File.join(CC_WIKI_FOLDER, "#@section_number-#{file_slug(@title)}.html")
       body = mod.alltext
       body = mod.content || '' if body.nil? || body.length == 0
       @body = convert_file_path_tokens(body)

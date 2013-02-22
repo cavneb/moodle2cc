@@ -10,7 +10,7 @@ module Moodle2CC::Canvas
 
     def initialize(mod, position=0)
       super
-      @rel_path = "#{identifier}/#{file_slug(@title)}.html"
+      @rel_path = "#{identifier}/#@section_number-#{file_slug(@title)}.html"
       @resource_type = LOR
       @body = convert_file_path_tokens(mod.description)
       @points_possible = mod.grade_item ? mod.grade_item.grade_max : mod.grade
